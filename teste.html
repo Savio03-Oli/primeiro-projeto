@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAC BO Live</title>
+
+  <!-- Meta redes sociais -->
+  <meta property="og:title" content="BAC BO Live" />
+  <meta property="og:description" content="Ensinos e estratégias BAC BO" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="bac.jpeg" />
+
+  <!-- Fonte -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0b3d0b, #0f6b2f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    /* Carrossel */
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .slider img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    .slider img.active {
+      opacity: 1;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      opacity: 0.85;
+      margin-bottom: 25px;
+    }
+
+    .link {
+      display: block;
+      background: linear-gradient(135deg, #d4af37, #f5d76e);
+      color: #000;
+      text-decoration: none;
+      padding: 15px;
+      border-radius: 14px;
+      margin-bottom: 15px;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    footer {
+      margin-top: 22px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Carrossel de imagens -->
+    <div class="slider">
+      <img src="bac.jpeg" class="active" alt="BAC BO Live">
+      <img src="img2.jpg" alt="Ensinos BAC BO">
+      <img src="img3.jpg" alt="Estratégias BAC BO">
+    </div>
+
+    <div class="title">BAC BO Live- Luffyy3x</div>
+    <div class="subtitle">Ensinos • Estratégias • Lives </div>
+
+    <a class="link" href="#">📺 Assistir Live</a>
+    <a class="link" href="#">📘 Ensinos BAC BO</a>
+    <a class="link" href="#">🛒 Loja Online</a>
+    <a class="link" href="#">📲 WhatsApp</a>
+
+    <footer>© 2026 Luffyy3x-BAC BO Live</footer>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slider img');
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 3000);
+  </script>
+
+</body>
+</html>
